@@ -1,0 +1,32 @@
+<h2>Employee Details</h2>
+
+<hr/>
+<div *ngIf="user">
+  <div>
+    <label><b>Nom: </b></label> {{user.username}}
+  </div>
+  <div>
+    <label><b>Mot de passe: </b></label> {{user.password}}
+  </div>
+  <div>
+    <label><b>Identifiant: </b></label> {{user.identifiant}}
+  </div>
+  <div>
+    <label><b>Raison: </b></label> {{user.raison_sociale}}
+  </div>
+  <div>
+    <label><b>Adresse: </b></label> {{user.email}}
+  </div>
+  <div>
+    <label><b>Numéro Téléphone: </b></label> {{user.numphone}}
+  </div>
+  <div>
+    <label><b>Numéro Licence: </b></label> {{user.numlic}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to User List</button><br>
+
+

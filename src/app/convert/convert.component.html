@@ -1,0 +1,31 @@
+<div class="container row">
+  <div class="col-md-12">
+    <h1>Upload File</h1>
+  </div>
+</div>
+
+<div class="container row">
+
+  <div class="col-md-6">
+    <input type="file" class="form-control" (change)="onFileChanged($event)">
+    <br>
+    <input type="button" [disabled]="!uploadClicked" class="btn btn-default" (click)="onUpload()" value="convertir">
+    <br>
+    <br>
+    <input type="button" class="btn btn-default"  (click)="download()" value="télécharger">
+  </div>
+
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=message>{{message}}</div>
+  </div>
+</div>
+
+<div *ngIf="data?.length>0">
+  <div *ngFor="let d of data">
+    {{d}}
+  </div>
+</div>
+
+</div>
